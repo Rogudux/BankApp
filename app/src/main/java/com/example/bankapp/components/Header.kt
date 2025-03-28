@@ -56,7 +56,7 @@ fun Header(){
             )
             Text(
                 text = "${stringResource(R.string.welcome)} ",
-                fontSize = 18.sp,
+                fontSize = 17.sp,
                 color = Color.Gray
             )
 
