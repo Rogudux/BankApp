@@ -36,7 +36,7 @@ import com.example.bankapp.ui.theme.TextColor
 
 @Composable
 fun TransCard(trans: Trans){
-    Row (modifier = Modifier.fillMaxWidth(),
+    Row (modifier = Modifier.fillMaxWidth().padding(vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically) {
 
         //Esta es una funcion para envase al objeto que pasa el string a un icon

@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             BankAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomeScreen(innerPadding)
+                    HomeScreen(innerPadding = innerPadding)
 
                 }
             }
@@ -48,16 +48,20 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-fun HomeScreen(innerPadding: PaddingValues) {
+fun HomeScreen(innerPadding: PaddingValues  )  {
     Column(
-        modifier = Modifier.fillMaxSize().padding(innerPadding)
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(paddingValues = innerPadding).padding(horizontal = 15.dp)
     ){
 
     Header()
     CateBox()
 
         Spacer(modifier = Modifier.padding(5.dp))
-    Row {
+    Row(
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp) // Padding manual si es necesario
+    ) {
         Text(
             text = "Transactions",
             fontSize = 25.sp,
